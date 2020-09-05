@@ -1,3 +1,31 @@
-<app-header></app-header>
-<app-filter-bar></app-filter-bar>
-<app-footer></app-footer>
+<app-header class="header-wrapper"></app-header>
+<main class="container main-wrapper">
+  <section class="container__row">
+    <app-filter-bar
+      class="container__col-12 container__col-sm-12 container__col-md-3 container__col-lg-2"
+      [launchYear]="reqObj?.launch_year"
+      [launchSuccess]="reqObj?.launch_success"
+      [landSuccess]="reqObj?.land_success"
+      (onFilterOptionChanges)="updateList($event)"
+    ></app-filter-bar>
+    <main
+      class="container__col-12 container__col-sm-12 container__col-md-9 container__col-lg-10"
+    >
+      <section class="container__row">
+        <app-program-card
+          *ngFor="let item of rocketDetails; let i = index"
+          class="container__col-12 container__col-sm-12 container__col-md-6 container__col-lg-3"
+          [rocketImageLink]="item?.links?.mission_patch_small"
+          [flightNumber]="item?.flight_number"
+          [missionName]="item?.mission_name"
+          [missionIds]="item?.mission_id"
+          [launchYear]="item?.launch_year"
+          [successfulLaunch]="item?.launch_success"
+          [successfulLanding]="getLanding(item)"
+        >
+        </app-program-card>
+      </section>
+    </main>
+  </section>
+</main>
+<app-footer class="footer-wrapper"></app-footer>
