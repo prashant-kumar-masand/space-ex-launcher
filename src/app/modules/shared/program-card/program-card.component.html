@@ -1,1 +1,34 @@
-<p>program-card works!</p>
+<article>
+  <figure>
+    <img [src]="rocketImageLink" alt="" />
+    <figcaption>
+      <p>{{ missionName }} #{{ flightNumber }}</p>
+    </figcaption>
+  </figure>
+  <section>
+    <p>Mission Ids:</p>
+    <ul>
+      <li *ngFor="let id of missionIds">{{ id }}</li>
+    </ul>
+    <table>
+      <tr>
+        <td><p>Launch Year :</p></td>
+        <td>
+          <p>{{ launchYear }}</p>
+        </td>
+      </tr>
+      <tr>
+        <td><p>Successful Launch :</p></td>
+        <td>
+          <p>{{ successfulLaunch }}</p>
+        </td>
+      </tr>
+      <tr>
+        <td><p>Successful Landing :</p></td>
+        <td>
+          <p>{{ successfulLanding }}</p>
+        </td>
+      </tr>
+    </table>
+  </section>
+</article>
