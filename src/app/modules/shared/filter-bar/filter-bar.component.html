@@ -1,1 +1,49 @@
-<p>filter-bar works!</p>
+<aside>
+  <main>
+    <h4>Filter</h4>
+    <section>
+      <p>Launch Year</p>
+      <hr />
+      <section>
+        <button
+          *ngFor="let item of yearList"
+          (click)="
+            launchYear = item.value;
+            updateFilterOption({ launch_year: launchYear })
+          "
+          [ngClass]="{ 'btn-active': item.value == launchYear }"
+        >
+          {{ item.name }}
+        </button>
+      </section>
+      <p>Successful Launch</p>
+      <hr />
+      <section>
+        <button
+          *ngFor="let item of launchList"
+          (click)="
+            launchSuccess = item.value;
+            updateFilterOption({ launch_success: launchSuccess })
+          "
+          [ngClass]="{ 'btn-active': item.value == launchSuccess }"
+        >
+          {{ item.name }}
+        </button>
+      </section>
+      <p>Successful Launch</p>
+      <hr />
+      <section>
+        <button
+          *ngFor="let item of landList"
+          (click)="
+            landSuccess = item.value;
+            updateFilterOption({ land_success: landSuccess })
+          "
+          [ngClass]="{ 'btn-active': item.value == landSuccess }"
+        >
+          {{ item.name }}
+        </button>
+      </section>
+    </section>
+  </main>
+</aside>

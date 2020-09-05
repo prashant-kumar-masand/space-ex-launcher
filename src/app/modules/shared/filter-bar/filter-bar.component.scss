@@ -1,0 +1,45 @@
+// todo
+
+aside {
+  main {
+    min-height: 50vh;
+    background-color: #ffffff;
+    margin: 0 1em 0 0;
+    padding: 0.5em;
+    // border: 1px solid darkgrey;
+    border-radius: 4px;
+    section {
+      p {
+        text-align: center;
+        font-size: 0.8em;
+        margin: 0.5em 0 0 0;
+      }
+      hr {
+        margin: 0.2em 1em;
+      }
+      section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        button {
+          flex-basis: 40%;
+          margin: 0.5em 0;
+          background-color: #c5e09b;
+          padding: 0.5em;
+          border: 0;
+          border-radius: 0.5em;
+          outline: none;
+
+          &:hover {
+            background-color: #7cba01;
+          }
+        }
+      }
+    }
+  }
+}
+
+.btn-active {
+  background-color: #7cba01 !important;
+}
