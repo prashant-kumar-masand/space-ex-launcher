@@ -13,12 +13,12 @@ export class HomeComponent implements OnInit {
   private ngUnsubscribe: Subject<any> = new Subject();
   public rocketDetails: any;
   public reqObj: any = {
-    limit: 10,
+    limit: 100,
     launch_year: null,
     launch_success: null,
     land_success: null
   };
-
+  public isLoading: boolean = false;
   constructor(
     private homeService: HomeService,
     private commonService: CommonService
@@ -29,28 +29,28 @@ export class HomeComponent implements OnInit {
   }
 
   private getSpaceExLaunches() {
+    this.isLoading = true;
     this.homeService
       .getSpaceExLaunches(this.reqObj)
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe(
         resData => {
+          this.isLoading = false;
           this.rocketDetails = resData;
         },
         err => {
+          this.isLoading = false;
           this.commonService.errorHandler(err.error);
         }
       );
   }
 
   public updateList(obj) {
-    console.log(obj);
     this.reqObj = { ...this.reqObj, ...obj };
     this.getSpaceExLaunches();
   }
 
   public getLanding(item) {
-    console.log(item);
-
     if (
       item &&
       item.rocket &&
@@ -69,6 +69,7 @@ export class HomeComponent implements OnInit {
    * @description unsubscribed from observables and hide the loader
    */
   ngOnDestroy() {
+    this.isLoading = false;
     this.ngUnsubscribe.next();
     this.ngUnsubscribe.complete();
   }
