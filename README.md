@@ -53,17 +53,18 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng test --code-coverage`
 
-## Goals Achieved by using Best practices used
+## Goals Achieved by using Best practices are
 
 - Server side rendering ahead of time while build creation
 - Test Driven Development by writing Unit test cases for Components
 - Atomic design by breaking down the complete design into small components
-  > Application Main Module is Home which consist HomeComponent and Child Components as Home, Footer, Filter-bar, Program-card
+  > Application Main Module is Home which consist HomeComponent and Child Components as Header, Footer, Filter-bar, Program-card
+- uses HTML Semantic Tags
 - Used SCSS for writing style scripts
   > uses mixins, functions, partials etc.,
 - Custom Grid system
 
-  > Created custom 12 column grid system using Flex-box, BEM methodology and Media Query with SCSS known as sp-grid which consist of following \
+  > Created custom 12 column grid system using Flex-box, BEM methodology and Media Query with SCSS known as sp-grid which consist of following
 
   > container, container-fluid\
   > container\_\_row
