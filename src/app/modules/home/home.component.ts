@@ -64,7 +64,7 @@ export class HomeComponent implements OnInit {
     this.getSpaceExLaunches();
   }
 
-  public getLanding(item) {
+  public getLanding(item: SpaceRocket) {
     if (
       item &&
       item.rocket &&
