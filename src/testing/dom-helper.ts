@@ -1,5 +1,6 @@
 import { ComponentFixture } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { DebugElement } from '@angular/core';
 
 export class DOMHelper<T> {
   private fixture: ComponentFixture<T>;
@@ -12,6 +13,13 @@ export class DOMHelper<T> {
     const htmlElement = this.fixture.debugElement.query(By.css(tagName));
     if (htmlElement) {
       return htmlElement.nativeElement.textContent;
+    }
+  }
+
+  getAllTextElement(tagName: string): Array<DebugElement> {
+    const htmlElement = this.fixture.debugElement.queryAll(By.css(tagName));
+    if (htmlElement) {
+      return htmlElement;
     }
   }
 
