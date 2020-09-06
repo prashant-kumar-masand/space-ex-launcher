@@ -27,4 +27,13 @@ export class DOMHelper<T> {
     const htmlElement = this.fixture.debugElement.queryAll(By.css(tagName));
     return htmlElement.length;
   }
+
+  isElement(tagName: string): boolean {
+    const htmlElement = this.fixture.debugElement.query(By.css(tagName));
+    if (htmlElement) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
