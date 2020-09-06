@@ -31,6 +31,10 @@ export class HomeComponent implements OnInit {
     this.getSpaceExLaunches();
   }
 
+  /**
+   * @function getSpaceExLaunches
+   * @description used to get list of Space ex launches.
+   */
   private getSpaceExLaunches() {
     this.isLoading = true;
     this.homeService
@@ -48,6 +52,11 @@ export class HomeComponent implements OnInit {
       );
   }
 
+  /**
+   * @function updateList
+   * @description used to update rocketDetails list .
+   * @param {object} query - It consist of filter object.
+   */
   public updateList(obj) {
     this.reqObj = { ...this.reqObj, ...obj };
     this.getSpaceExLaunches();

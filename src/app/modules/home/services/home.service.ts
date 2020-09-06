@@ -18,6 +18,11 @@ export class HomeService {
     this.apiBaseUrl = `${environment.apiBaseUrl}/${environment.apiVersion}/${environment.apiBasePath}`;
   }
 
+  /**
+   * @function getSpaceExLaunches
+   * @description used to get list of Space ex launches.
+   * @param {object} query - It consist of filter object.
+   */
   getSpaceExLaunches(queryData) {
     const options = {
       params: this.buidlQueryParams(queryData)
@@ -33,6 +38,11 @@ export class HomeService {
     );
   }
 
+  /**
+   * @function buidlQueryParams
+   * @description used to build query parameters.
+   * @param {object} query - It consist of filter object.
+   */
   buidlQueryParams(query) {
     let params = new HttpParams();
     if (query.launch_success)
