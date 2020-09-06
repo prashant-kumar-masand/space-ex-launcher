@@ -77,6 +77,11 @@ Run `ng test --code-coverage`
   > xl - 12 \
   > eg :- container\_\_col-md-12
 
+## Light house performance metrics
+
+- find detailed view of light house [performance-metrics-pdf](https://drive.google.com/file/d/1wDZCD7cDx6PNJTmMN2ssNrlxlTmw6yHb/view?usp=sharing)
+  [performance-metrics-png](https://drive.google.com/file/d/1kr6lELEz008wXqxSE-JSjdnf9Qbg9toH/view?usp=sharing)
+
 ## Author
 
 **Prashant Kumar Singh**
