@@ -11,7 +11,7 @@
     <main
       class="container__col-12 container__col-sm-12 container__col-md-9 container__col-lg-10"
     >
-      <section class="container__row" *ngIf="!isLoading">
+      <section class="container__row scroll-cards" *ngIf="!isLoading">
         <app-program-card
           *ngFor="let item of rocketDetails; let i = index"
           class="container__col-12 container__col-sm-12 container__col-md-6 container__col-lg-3"
