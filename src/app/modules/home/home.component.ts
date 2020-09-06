@@ -3,6 +3,7 @@ import { HomeService } from './services/home.service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/internal/operators';
 import { CommonService } from 'src/app/core/services/common.service';
+import { CanonicalService } from 'src/app/core/services/canonical.service';
 
 @Component({
   selector: 'app-home',
@@ -21,10 +22,12 @@ export class HomeComponent implements OnInit {
   public isLoading: boolean = false;
   constructor(
     private homeService: HomeService,
-    private commonService: CommonService
+    private commonService: CommonService,
+    private canonicalService: CanonicalService
   ) {}
 
   ngOnInit(): void {
+    this.canonicalService.setCanonicalURL();
     this.getSpaceExLaunches();
   }
 
