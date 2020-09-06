@@ -1,4 +1,9 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {
+  YearList,
+  LaunchList,
+  LandList
+} from 'src/app/Interfaces/FilterList.interface';
 
 @Component({
   selector: 'app-filter-bar',
@@ -16,7 +21,7 @@ export class FilterBarComponent implements OnInit {
     any
   >();
 
-  public yearList = [
+  public yearList: YearList[] = [
     { name: '2006', value: 2006 },
     { name: '2007', value: 2007 },
     { name: '2008', value: 2008 },
@@ -32,11 +37,11 @@ export class FilterBarComponent implements OnInit {
     { name: '2019', value: 2019 },
     { name: '2020', value: 2020 }
   ];
-  public launchList = [
+  public launchList: LaunchList[] = [
     { name: 'true', value: 'true' },
     { name: 'false', value: 'false' }
   ];
-  public landList = [
+  public landList: LandList[] = [
     { name: 'true', value: 'true' },
     { name: 'false', value: 'false' }
   ];

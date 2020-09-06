@@ -4,6 +4,8 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/internal/operators';
 import { CommonService } from 'src/app/core/services/common.service';
 import { CanonicalService } from 'src/app/core/services/canonical.service';
+import { SpaceRocket } from 'src/app/Interfaces/SpaceRocket.interface';
+import { FilterOptions } from 'src/app/Interfaces/FilterOptions.interface';
 
 @Component({
   selector: 'app-home',
@@ -12,8 +14,8 @@ import { CanonicalService } from 'src/app/core/services/canonical.service';
 })
 export class HomeComponent implements OnInit {
   private ngUnsubscribe: Subject<any> = new Subject();
-  public rocketDetails: any;
-  public reqObj: any = {
+  public rocketDetails: SpaceRocket[];
+  public reqObj: FilterOptions = {
     limit: 100,
     launch_year: null,
     launch_success: null,
@@ -57,7 +59,7 @@ export class HomeComponent implements OnInit {
    * @description used to update rocketDetails list .
    * @param {object} query - It consist of filter object.
    */
-  public updateList(obj) {
+  public updateList(obj: FilterOptions) {
     this.reqObj = { ...this.reqObj, ...obj };
     this.getSpaceExLaunches();
   }

@@ -6,7 +6,8 @@ import {
 } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { catchError, map, retry } from 'rxjs/internal/operators';
-import { throwError, BehaviorSubject } from 'rxjs';
+import { throwError, BehaviorSubject, Observable } from 'rxjs';
+import { SpaceRocket } from 'src/app/Interfaces/SpaceRocket.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -23,11 +24,11 @@ export class HomeService {
    * @description used to get list of Space ex launches.
    * @param {object} query - It consist of filter object.
    */
-  getSpaceExLaunches(queryData) {
+  getSpaceExLaunches(queryData): Observable<SpaceRocket[]> {
     const options = {
       params: this.buidlQueryParams(queryData)
     };
-    return this.http.get<any>(this.apiBaseUrl, options).pipe(
+    return this.http.get<SpaceRocket[]>(this.apiBaseUrl, options).pipe(
       retry(0),
       map(res => {
         return res;
