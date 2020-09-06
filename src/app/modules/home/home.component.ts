@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   private ngUnsubscribe: Subject<any> = new Subject();
   public rocketDetails: SpaceRocket[];
   public reqObj: FilterOptions = {
-    limit: 100,
+    limit: 10,
     launch_year: null,
     launch_success: null,
     land_success: null
