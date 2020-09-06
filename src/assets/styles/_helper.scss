@@ -1,3 +1,5 @@
+@import "./variable";
+
 $z-indexes: (
   "common-loader",
   "site-header",
@@ -20,4 +22,8 @@ $z-indexes: (
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+@mixin cardValueColor {
+  color: $spCardValue;
 }

@@ -1,18 +1,17 @@
-// todo
-
+@import "../../../../assets/styles/helper";
 aside {
   main {
     min-height: 50vh;
-    background-color: #ffffff;
+    background-color: $spWhite;
     margin: 0 1em 0 0;
-    padding: 0.5em;
-    // border: 1px solid darkgrey;
+    padding: 0.5em 0.5em 4em 0.5em;
     border-radius: 4px;
     section {
       p {
         text-align: center;
         font-size: 0.8em;
         margin: 0.5em 0 0 0;
+        color: $spFilterLabel;
       }
       hr {
         margin: 0.2em 1em;
@@ -25,14 +24,14 @@ aside {
         button {
           flex-basis: 40%;
           margin: 0.5em 0;
-          background-color: #c5e09b;
+          background-color: $spBtnLight;
           padding: 0.5em;
           border: 0;
           border-radius: 0.5em;
           outline: none;
 
           &:hover {
-            background-color: #7cba01;
+            background-color: $spBtnHover;
           }
         }
       }
@@ -41,5 +40,5 @@ aside {
 }
 
 .btn-active {
-  background-color: #7cba01 !important;
+  background-color: $spBtnActive !important;
 }

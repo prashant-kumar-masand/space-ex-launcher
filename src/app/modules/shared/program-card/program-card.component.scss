@@ -1,7 +1,6 @@
-// todo
-
+@import "../../../../assets/styles/helper";
 article {
-  background-color: #ffffff;
+  background-color: $spWhite;
   margin: 0 0.5em 0.5em 0;
   height: 50vh;
   overflow-y: auto;
@@ -11,16 +10,31 @@ article {
     img {
       height: 20vh;
       width: 100%;
+      background-color: $spThemeBg;
+    }
+    figcaption {
+      p {
+        @include cardValueColor();
+      }
     }
   }
   section {
     margin: 0;
-    padding: 0.5em;
+    padding: 0.5em 0em 0em 1.5em;
     ul {
       margin: 0em;
       li {
         font-size: small;
         font-weight: 400;
+        @include cardValueColor();
+      }
+    }
+  }
+
+  table {
+    tr {
+      td:nth-child(2) {
+        color: $spCardValue;
       }
     }
   }
@@ -29,7 +43,7 @@ article {
   transition: 0.3s;
 
   &:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 4px rgba(0, 0, 0, 0.2);
   }
 }
 

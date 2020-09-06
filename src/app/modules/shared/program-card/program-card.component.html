@@ -2,29 +2,37 @@
   <figure>
     <img [src]="rocketImageLink" alt="" />
     <figcaption>
-      <p>{{ missionName }} #{{ flightNumber }}</p>
+      <p>
+        <strong>{{ missionName }} #{{ flightNumber }}</strong>
+      </p>
     </figcaption>
   </figure>
   <section>
-    <p>Mission Ids:</p>
+    <p><strong>Mission Ids:</strong></p>
     <ul>
       <li *ngFor="let id of missionIds">{{ id }}</li>
     </ul>
     <table>
       <tr>
-        <td><p>Launch Year :</p></td>
+        <td>
+          <p><strong>Launch Year :</strong></p>
+        </td>
         <td>
           <p>{{ launchYear }}</p>
         </td>
       </tr>
       <tr>
-        <td><p>Successful Launch :</p></td>
+        <td>
+          <p><strong>Successful Launch :</strong></p>
+        </td>
         <td>
           <p>{{ successfulLaunch }}</p>
         </td>
       </tr>
       <tr>
-        <td><p>Successful Landing :</p></td>
+        <td>
+          <p><strong>Successful Landing :</strong></p>
+        </td>
         <td>
           <p>{{ successfulLanding }}</p>
         </td>
