@@ -1,14 +1,14 @@
 @import "../../../../assets/styles/helper";
 article {
   background-color: $spWhite;
-  margin: 0 0.5em 0.5em 0;
-  height: 50vh;
-  overflow-y: auto;
+  margin: 0 0.5em 0.5em 0.5em;
+  height: 27rem;
+  // overflow-y: auto;
   figure {
     margin: 0;
     padding: 0.5em;
     img {
-      height: 20vh;
+      height: 100%;
       width: 100%;
       background-color: $spThemeBg;
     }
@@ -20,7 +20,7 @@ article {
   }
   section {
     margin: 0;
-    padding: 0.5em 0em 0em 1.5em;
+    padding: 0.5em 0.5em 0em 0.5em;
     ul {
       margin: 0em;
       li {

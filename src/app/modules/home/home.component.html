@@ -2,19 +2,20 @@
 <main class="container main-wrapper">
   <section class="container__row">
     <app-filter-bar
-      class="container__col-12 container__col-sm-12 container__col-md-3 container__col-lg-2"
+      class="container__col-12 container__col-sm-12 container__col-md-4 container__col-lg-2"
       [launchYear]="reqObj?.launch_year"
       [launchSuccess]="reqObj?.launch_success"
       [landSuccess]="reqObj?.land_success"
       (onFilterOptionChanges)="updateList($event)"
     ></app-filter-bar>
     <main
-      class="container__col-12 container__col-sm-12 container__col-md-9 container__col-lg-10"
+      class="container__col-12 container__col-sm-12 container__col-md-8 container__col-lg-10"
     >
-      <section class="container__row scroll-cards" *ngIf="!isLoading">
+      <section class="container__row" *ngIf="!isLoading">
         <app-program-card
           *ngFor="let item of rocketDetails; let i = index"
-          class="container__col-12 container__col-sm-12 container__col-md-6 container__col-lg-3"
+          class="container__col-12 container__col-sm-12 container__col-md-5 container__col-lg-3
+          container__col-md-offset-1 container__col-lg-offset-0"
           [rocketImageLink]="item?.links?.mission_patch_small"
           [flightNumber]="item?.flight_number"
           [missionName]="item?.mission_name"
