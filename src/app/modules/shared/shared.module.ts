@@ -5,6 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FilterBarComponent } from './filter-bar/filter-bar.component';
 import { ProgramCardComponent } from './program-card/program-card.component';
 import { CommonLoaderComponent } from './common-loader/common-loader.component';
+import { LazyLoadDirective } from './directives/lazy-load-directive';
 
 @NgModule({
   declarations: [
@@ -12,16 +13,19 @@ import { CommonLoaderComponent } from './common-loader/common-loader.component';
     FooterComponent,
     FilterBarComponent,
     ProgramCardComponent,
-    CommonLoaderComponent
+    CommonLoaderComponent,
+    LazyLoadDirective
   ],
   imports: [CommonModule],
   exports: [
-    /** Shared Components  * */
+    /** Shared Components  **/
     HeaderComponent,
     FooterComponent,
     FilterBarComponent,
     ProgramCardComponent,
-    CommonLoaderComponent
+    CommonLoaderComponent,
+    /** Shared Directives **/
+    LazyLoadDirective
   ]
 })
 export class SharedModule {}

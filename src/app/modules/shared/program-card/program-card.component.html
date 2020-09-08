@@ -1,12 +1,13 @@
 <article>
   <figure>
     <img
-      src="{{
+      imgLazyLoadDirective
+      [src]="
         rocketImageLink
           ? rocketImageLink
           : '../../../../assets/images/default-image.jpg'
-      }}"
-      alt=""
+      "
+      [alt]="missionName"
     />
     <figcaption>
       <p>
