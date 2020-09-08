@@ -1,6 +1,13 @@
 <article>
   <figure>
-    <img [src]="rocketImageLink" alt="" />
+    <img
+      src="{{
+        rocketImageLink
+          ? rocketImageLink
+          : '../../../../assets/images/default-image.jpg'
+      }}"
+      alt=""
+    />
     <figcaption>
       <p>
         <strong>{{ missionName }} #{{ flightNumber }}</strong>

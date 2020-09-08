@@ -2,8 +2,11 @@
 article {
   background-color: $spWhite;
   margin: 0 0.5em 0.5em 0.5em;
-  height: 27rem;
+  height: 25rem;
   // overflow-y: auto;
+  @media screen and (max-width: 699px) {
+    height: 27rem;
+  }
   figure {
     margin: 0;
     padding: 0.5em;
