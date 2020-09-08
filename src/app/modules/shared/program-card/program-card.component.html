@@ -1,14 +1,6 @@
 <article>
   <figure>
-    <img
-      imgLazyLoadDirective
-      [src]="
-        rocketImageLink
-          ? rocketImageLink
-          : '../../../../assets/images/default-image.jpg'
-      "
-      [alt]="missionName"
-    />
+    <img imgLazyLoadDirective [src]="rocketImageLink" [alt]="missionName" />
     <figcaption>
       <p>
         <strong>{{ missionName }} #{{ flightNumber }}</strong>

@@ -10,7 +10,8 @@ import {
   selector: '[imgLazyLoadDirective]'
 })
 export class LazyLoadDirective implements AfterViewInit {
-  @HostBinding('attr.src') srcAttr = null;
+  @HostBinding('attr.src') srcAttr =
+    '../../../../assets/images/default-image.jpg';
   @Input() src: string;
 
   constructor(private el: ElementRef) {}
@@ -48,6 +49,6 @@ export class LazyLoadDirective implements AfterViewInit {
    * @description used to setting image on the html image tag .
    */
   private loadImage() {
-    this.srcAttr = this.src;
+    if (this.src) this.srcAttr = this.src;
   }
 }
