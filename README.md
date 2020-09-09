@@ -83,8 +83,8 @@ Run `ng test --code-coverage`
 
 ## Light house performance metrics
 
-- find detailed view of light house [performance-metrics-pdf](https://drive.google.com/file/d/1wDZCD7cDx6PNJTmMN2ssNrlxlTmw6yHb/view?usp=sharing)
-  [performance-metrics-png](https://drive.google.com/file/d/1kr6lELEz008wXqxSE-JSjdnf9Qbg9toH/view?usp=sharing)
+- find detailed view of the lighthouse as [performance-metrics-desktop.pdf](https://drive.google.com/file/d/1fObAfpZnzTy630JIde8fLNgJKyojkr_6/view?usp=sharing) \
+  [performance-metrics-mobile.pdf](https://drive.google.com/file/d/1X_rzfrhmXNqcmUWJglVMr8aisugUNj81/view?usp=sharing)
 
 ## Author
 
