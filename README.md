@@ -77,6 +77,10 @@ Run `ng test --code-coverage`
   > xl - 12 \
   > eg :- container\_\_col-md-12
 
+- Added Image Lazy loading which significantly improves the performance of application on both mobile and desktop devices
+
+- Added robots.txt and sitemap.xml for better search engine visibility which helps in crawling the pages on Web
+
 ## Light house performance metrics
 
 - find detailed view of light house [performance-metrics-pdf](https://drive.google.com/file/d/1wDZCD7cDx6PNJTmMN2ssNrlxlTmw6yHb/view?usp=sharing)
