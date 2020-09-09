@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, PLATFORM_ID, Inject } from '@angular/core';
+import { isPlatformServer } from '@angular/common';
 
 @Component({
   selector: 'app-program-card',
@@ -20,8 +21,11 @@ export class ProgramCardComponent implements OnInit {
   public successfulLaunch: boolean;
   @Input()
   public successfulLanding: boolean;
+  public isPlatformServer: boolean;
 
-  constructor() {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    this.isPlatformServer = isPlatformServer(this.platformId);
+  }
 
   ngOnInit(): void {}
 }

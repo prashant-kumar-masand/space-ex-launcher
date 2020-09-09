@@ -1,9 +1,14 @@
 <article>
   <figure>
     <img
-      imgLazyLoadDirective
-      [id]="rocketImageLink"
+      *ngIf="isPlatformServer"
       [src]="'../../../../assets/images/default-image.jpg'"
+      [alt]="missionName"
+    />
+    <img
+      *ngIf="!isPlatformServer"
+      imgLazyLoadDirective
+      [src]="rocketImageLink"
       [alt]="missionName"
     />
     <figcaption>
