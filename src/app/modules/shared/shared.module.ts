@@ -6,6 +6,8 @@ import { FilterBarComponent } from './filter-bar/filter-bar.component';
 import { ProgramCardComponent } from './program-card/program-card.component';
 import { CommonLoaderComponent } from './common-loader/common-loader.component';
 import { LazyLoadDirective } from './directives/lazy-load-directive';
+import { SuccessfulLandingPipe } from './pipes/successful-landing/successful-landing.pipe';
+import { DefaultValuePipe } from './pipes/default-value/default-value.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { LazyLoadDirective } from './directives/lazy-load-directive';
     FilterBarComponent,
     ProgramCardComponent,
     CommonLoaderComponent,
-    LazyLoadDirective
+    LazyLoadDirective,
+    SuccessfulLandingPipe,
+    DefaultValuePipe
   ],
   imports: [CommonModule],
   exports: [
@@ -25,7 +29,10 @@ import { LazyLoadDirective } from './directives/lazy-load-directive';
     ProgramCardComponent,
     CommonLoaderComponent,
     /** Shared Directives **/
-    LazyLoadDirective
+    LazyLoadDirective,
+    /** Shared Pipes **/
+    SuccessfulLandingPipe,
+    DefaultValuePipe
   ]
 })
 export class SharedModule {}

@@ -64,20 +64,6 @@ export class HomeComponent implements OnInit {
     this.getSpaceExLaunches();
   }
 
-  public getLanding(item: SpaceRocket) {
-    if (
-      item &&
-      item.rocket &&
-      item.rocket.first_stage &&
-      item.rocket.first_stage.cores instanceof Array
-    )
-      if (item.rocket.first_stage.cores[0]) {
-        return item.rocket.first_stage.cores[0].land_success;
-      } else {
-        return null;
-      }
-  }
-
   /**
    * @function ngOnDestroy
    * @description unsubscribed from observables and hide the loader

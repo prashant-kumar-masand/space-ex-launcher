@@ -36,7 +36,7 @@
           <p><strong>Successful Launch:</strong></p>
         </td>
         <td>
-          <p>{{ successfulLaunch }}</p>
+          <p>{{ successfulLaunch | defaultValue }}</p>
         </td>
       </tr>
       <tr>
@@ -44,7 +44,7 @@
           <p><strong>Successful Landing:</strong></p>
         </td>
         <td>
-          <p>{{ successfulLanding ? successfulLanding : "N/A" }}</p>
+          <p>{{ successfulLanding | defaultValue }}</p>
         </td>
       </tr>
     </table>

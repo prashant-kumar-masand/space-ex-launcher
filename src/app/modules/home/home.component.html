@@ -22,7 +22,7 @@
           [missionIds]="item?.mission_id"
           [launchYear]="item?.launch_year"
           [successfulLaunch]="item?.launch_success"
-          [successfulLanding]="getLanding(item)"
+          [successfulLanding]="item | successfulLanding"
         >
         </app-program-card>
       </section>
