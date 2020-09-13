@@ -48,7 +48,7 @@ describe('FilterBarComponent', () => {
       );
     });
 
-    it(`should contains 3 filter option labeled as 'Successful Land'`, () => {
+    it(`should contains 2 filter option labeled as 'Successful Land'`, () => {
       expect(filterLabelHtmlElem[2].nativeElement.textContent).toBe(
         'Successful Land'
       );

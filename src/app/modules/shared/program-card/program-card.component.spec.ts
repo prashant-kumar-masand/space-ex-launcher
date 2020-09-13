@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProgramCardComponent } from './program-card.component';
 import { DOMHelper } from 'src/testing/dom-helper';
+import { DefaultValuePipe } from '../pipes/default-value/default-value.pipe';
 
 describe('ProgramCardComponent', () => {
   let component: ProgramCardComponent;
@@ -10,7 +11,7 @@ describe('ProgramCardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ProgramCardComponent]
+      declarations: [ProgramCardComponent, DefaultValuePipe]
     }).compileComponents();
   }));
 
