@@ -13,7 +13,7 @@ import { SpaceRocket } from 'src/app/Interfaces/SpaceRocket.interface';
   providedIn: 'root'
 })
 export class HomeService {
-  private apiBaseUrl: string = '';
+  public apiBaseUrl: string = '';
 
   constructor(private http: HttpClient) {
     this.apiBaseUrl = `${environment.apiBaseUrl}/${environment.apiVersion}/${environment.apiBasePath}`;
