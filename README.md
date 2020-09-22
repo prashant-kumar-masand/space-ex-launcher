@@ -53,6 +53,10 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng test --code-coverage`
 
+## Run e2e test
+
+Run `ng run e2e` to execute the end-to-end integration tests via Cypress.io
+
 ## Goals Achieved by using Best practices are
 
 - Server side rendering ahead of time while build creation
@@ -74,7 +78,7 @@ Run `ng test --code-coverage`
   > sm - 576 \
   > md - 700 \
   > lg - 1024 \
-  > xl - 12 \
+  > xl - 1440 \
   > eg :- container\_\_col-md-12
 
 - Added Image Lazy loading which significantly improves the performance of application on both mobile and desktop devices
